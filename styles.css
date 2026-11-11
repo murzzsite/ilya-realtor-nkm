@@ -156,18 +156,20 @@ button, input, select { font: inherit; color: inherit; }
 .pair img { position: absolute; object-fit: cover; opacity: 0; transform: translateY(40px) scale(1.06); transition: opacity .7s var(--ease), transform 1s var(--ease); }
 .pair.is-on img { opacity: 1; transform: none; }
 .pair__b { transition-delay: .12s; }
-.pair__a { left: var(--m); width: clamp(150px, 16vw, 240px); aspect-ratio: 4 / 5; top: 44%; }
+.pair__a { left: var(--m); width: clamp(150px, 16vw, 240px); aspect-ratio: 4 / 5; top: 44%; object-position: 50% 24%; }
 .pair__b { right: var(--m); width: clamp(170px, 19vw, 280px); aspect-ratio: 1 / 1; top: 56%; }
-.pair[data-i="1"] .pair__a { aspect-ratio: 3 / 4; top: 52%; object-position: 30% 50%; }
+.pair img[src$=".svg"] { object-fit: contain; background: var(--sky); }
+.pair[data-i="0"] .pair__b { object-position: 40% 50%; }
+.pair[data-i="1"] .pair__a { aspect-ratio: 3 / 4; top: 52%; object-position: 36% 50%; }
 .pair[data-i="1"] .pair__b { aspect-ratio: 16 / 10; top: 46%; }
-.pair[data-i="2"] .pair__a { aspect-ratio: 1 / 1; top: 48%; }
-.pair[data-i="2"] .pair__b { aspect-ratio: 4 / 5; top: 50%; object-position: 70% 50%; }
-.pair[data-i="3"] .pair__a { aspect-ratio: 16 / 10; top: 58%; object-position: 20% 50%; }
-.pair[data-i="3"] .pair__b { aspect-ratio: 3 / 4; top: 44%; object-position: 60% 50%; }
-.pair[data-i="4"] .pair__a { aspect-ratio: 4 / 5; top: 50%; object-position: 40% 50%; }
-.pair[data-i="4"] .pair__b { aspect-ratio: 16 / 10; top: 60%; }
-.pair[data-i="5"] .pair__a { aspect-ratio: 1 / 1; top: 56%; object-position: 80% 50%; }
-.pair[data-i="5"] .pair__b { aspect-ratio: 3 / 4; top: 46%; }
+.pair[data-i="2"] .pair__a { aspect-ratio: 1 / 1; top: 48%; object-position: 50% 30%; }
+.pair[data-i="2"] .pair__b { aspect-ratio: 4 / 5; top: 50%; object-position: 74% 50%; }
+.pair[data-i="3"] .pair__a { aspect-ratio: 16 / 10; top: 58%; object-position: 30% 50%; }
+.pair[data-i="3"] .pair__b { aspect-ratio: 3 / 4; top: 44%; object-position: 50% 40%; }
+.pair[data-i="4"] .pair__a { aspect-ratio: 4 / 5; top: 50%; object-position: 50% 28%; }
+.pair[data-i="4"] .pair__b { aspect-ratio: 16 / 10; top: 60%; object-position: 72% 50%; }
+.pair[data-i="5"] .pair__a { aspect-ratio: 1 / 1; top: 56%; object-position: 50% 32%; }
+.pair[data-i="5"] .pair__b { aspect-ratio: 3 / 4; top: 46%; object-position: 32% 50%; }
 
 /* ===== check ===== */
 .check { background: var(--bg); }
@@ -199,11 +201,13 @@ button, input, select { font: inherit; color: inherit; }
 .st { display: contents; }
 .st__pic { overflow: hidden; }
 .st__pic img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
+.st__pic img[src$=".svg"] { object-fit: contain; }
+.st1 .st__pic img { object-position: 50% 30%; }
 .st__p { max-width: 36ch; }
 .st__p strong { font-weight: 500; }
 .st1 .st__pic { grid-column: 1 / 5; grid-row: 1 / 3; aspect-ratio: 3 / 4; }
 .st1 .st__p { grid-column: 5 / 8; grid-row: 2; margin-top: 48px; align-self: start; }
-.st2 .st__pic { grid-column: 6 / 9; grid-row: 3; aspect-ratio: 1 / 1; margin-top: 120px; }
+.st2 .st__pic { grid-column: 6 / 9; grid-row: 3; aspect-ratio: 5 / 4; margin-top: 120px; }
 .st2 .st__p { grid-column: 9 / 13; grid-row: 3; margin-top: 120px; align-self: start; }
 .st3 .st__pic { grid-column: 8 / 13; grid-row: 4; aspect-ratio: 16 / 10; margin-top: 100px; }
 .st3 .st__p { grid-column: 3 / 8; grid-row: 4; margin-top: 100px; align-self: start; justify-self: end; padding-right: 8px; }
@@ -215,6 +219,7 @@ button, input, select { font: inherit; color: inherit; }
 .about__photo { position: relative; grid-column: 1 / 9; overflow: hidden; aspect-ratio: 16 / 10; }
 .about__photo img { width: 100%; height: 100%; object-fit: cover; will-change: transform; }
 .about__note { position: absolute; top: 0; right: 0; width: 340px; padding: 22px; background: var(--bg); font-size: var(--step-body); line-height: 1.5; }
+.about__photo img { object-position: 50% 62%; }
 .about__side { grid-column: 9 / 13; display: grid; gap: 32px; }
 .about__tile { background: var(--sky); aspect-ratio: 300 / 220; overflow: hidden; }
 .about__tile svg { width: 100%; height: 100%; display: block; }
@@ -225,6 +230,10 @@ button, input, select { font: inherit; color: inherit; }
 .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 24px 20px; }
 .facts dt { font-size: var(--step-small); color: var(--ink); opacity: .78; }
 .facts dd { font-size: var(--step-body); font-weight: 500; line-height: 1.3; margin-top: 2px; }
+
+.about__more { margin-top: 16px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--gap); }
+.about__more figure { aspect-ratio: 3 / 4; overflow: hidden; background: var(--sky); }
+.about__more img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 30%; display: block; }
 
 /* ===== faq ===== */
 .faq { background: var(--sage); padding-bottom: clamp(96px, 12vw, 200px); }
@@ -324,7 +333,7 @@ button, input, select { font: inherit; color: inherit; }
   .st { display: block; margin-bottom: 56px; }
   .st .st__pic { grid-column: auto; margin: 0; }
   .st1 .st__pic { width: 100%; aspect-ratio: 3 / 4; }
-  .st2 .st__pic { width: 62%; margin-left: auto; aspect-ratio: 1 / 1; }
+  .st2 .st__pic { width: 72%; margin-left: auto; aspect-ratio: 5 / 4; }
   .st3 .st__pic { width: 78%; aspect-ratio: 16 / 10; }
   .st .st__p { margin: 18px 0 0 !important; max-width: 42ch; padding: 0; }
   .st2 .st__p { margin-left: 38% !important; }
@@ -334,6 +343,7 @@ button, input, select { font: inherit; color: inherit; }
   .about__photo img { aspect-ratio: 4 / 3; }
   .about__side { grid-template-columns: 1fr; }
   .about__tile { aspect-ratio: 3 / 2; }
+  .about__more { gap: 8px; }
 
   .faq__grid { grid-template-columns: 1fr; }
   .faq__text { grid-column: 1; order: 2; }

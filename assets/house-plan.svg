@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 800" role="img" aria-labelledby="t" font-family="Geologica,'Segoe UI',Arial,sans-serif" fill="#0E1C20">
+  <title id="t">Пример чертежа: план первого этажа частного дома, 10 на 8 метров</title>
+  <defs>
+    <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
+      <path d="M30 0H0V30" fill="none" stroke="#0E1C20" stroke-opacity=".07" stroke-width="1"/>
+    </pattern>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="rotate(45)">
+      <path d="M0 0V9" stroke="#0E1C20" stroke-opacity=".22" stroke-width="1.4"/>
+    </pattern>
+  </defs>
+
+  <rect width="1000" height="800" fill="#CFE1EA"/>
+  <rect width="1000" height="800" fill="url(#grid)"/>
+
+  <!-- терраса -->
+  <rect x="170" y="630" width="390" height="86" fill="url(#hatch)" stroke="#0E1C20" stroke-opacity=".5" stroke-width="2" stroke-dasharray="7 6"/>
+  <text x="365" y="678" font-size="13" text-anchor="middle" fill="#46565B">Терраса</text>
+
+  <!-- комнаты -->
+  <g fill="#EEF2F1">
+    <rect x="170" y="150" width="210" height="240"/>
+    <rect x="380" y="150" width="210" height="240"/>
+    <rect x="590" y="150" width="180" height="120"/>
+    <rect x="590" y="270" width="180" height="120"/>
+    <rect x="170" y="390" width="390" height="240"/>
+    <rect x="560" y="390" width="210" height="240"/>
+  </g>
+
+  <!-- мебель -->
+  <g fill="none" stroke="#0E1C20" stroke-opacity=".55" stroke-width="1.6">
+    <rect x="195" y="178" width="100" height="125" rx="4"/><rect x="195" y="178" width="100" height="32" rx="4"/>
+    <rect x="405" y="178" width="100" height="125" rx="4"/><rect x="405" y="178" width="100" height="32" rx="4"/>
+    <rect x="604" y="282" width="38" height="98" rx="5"/>
+    <circle cx="742" cy="302" r="13"/><rect x="730" y="318" width="24" height="10" rx="2"/>
+    <rect x="720" y="346" width="40" height="28" rx="4"/>
+    <rect x="195" y="556" width="170" height="44" rx="6"/><rect x="195" y="556" width="48" height="44" rx="6"/>
+    <rect x="395" y="425" width="130" height="58" rx="4"/>
+    <path d="M520 600H410V566"/><path d="M520 600V566"/><circle cx="450" cy="582" r="8"/><circle cx="485" cy="582" r="8"/>
+  </g>
+
+  <!-- проёмы: вырезаем стены -->
+  <g stroke="#EEF2F1" stroke-width="12" stroke-linecap="butt">
+    <path d="M230 390H300"/>
+    <path d="M440 390H510"/>
+    <path d="M650 390H720"/>
+    <path d="M560 450V560"/>
+    <path d="M640 630H710"/>
+    <path d="M770 175V235"/>
+  </g>
+
+  <!-- стены -->
+  <g fill="none" stroke="#0E1C20" stroke-linejoin="miter">
+    <rect x="170" y="150" width="600" height="480" stroke-width="10"/>
+    <g stroke-width="5">
+      <path d="M170 390H230M300 390H440M510 390H650M720 390H770"/>
+      <path d="M380 150V390"/>
+      <path d="M590 150V390"/>
+      <path d="M590 270H770"/>
+      <path d="M560 390V450M560 560V630"/>
+    </g>
+  </g>
+
+  <!-- окна -->
+  <g stroke="none" fill="#CFE1EA">
+    <rect x="228" y="143" width="94" height="14"/><rect x="438" y="143" width="94" height="14"/>
+    <rect x="163" y="440" width="14" height="140"/><rect x="214" y="623" width="210" height="14"/>
+    <rect x="763" y="318" width="14" height="48"/>
+  </g>
+  <g stroke="#0E1C20" stroke-width="2.4" fill="none">
+    <path d="M228 146H322M228 154H322M438 146H532M438 154H532"/>
+    <path d="M166 440V580M174 440V580"/>
+    <path d="M214 626H424M214 634H424"/>
+    <path d="M766 318V366M774 318V366"/>
+  </g>
+
+  <!-- двери: створка и дуга -->
+  <g fill="none" stroke="#0E1C20" stroke-width="2.4">
+    <path d="M230 390V460M300 390A70 70 0 0 1 230 460"/>
+    <path d="M510 390V460M440 390A70 70 0 0 0 510 460"/>
+    <path d="M650 390V460M720 390A70 70 0 0 1 650 460"/>
+    <path d="M640 630V560M710 630A70 70 0 0 0 640 560"/>
+    <path d="M770 175H830M770 235A60 60 0 0 1 830 175"/>
+  </g>
+
+  <!-- вход -->
+  <path d="M675 752V668" stroke="#F26A2E" stroke-width="5" stroke-linecap="round"/>
+  <path d="M657 686L675 662L693 686Z" fill="#F26A2E"/>
+  <text x="675" y="778" font-size="14" font-weight="500" text-anchor="middle">Вход</text>
+
+  <!-- подписи комнат -->
+  <g text-anchor="middle">
+    <text x="275" y="338" font-size="17" font-weight="500">Спальня</text><text x="275" y="360" font-size="13" fill="#46565B">12 м²</text>
+    <text x="455" y="338" font-size="17" font-weight="500">Спальня</text><text x="455" y="360" font-size="13" fill="#46565B">12 м²</text>
+    <text x="680" y="206" font-size="17" font-weight="500">Котельная</text><text x="680" y="228" font-size="13" fill="#46565B">5 м²</text>
+    <text x="681" y="330" font-size="16" font-weight="500">Санузел</text><text x="681" y="351" font-size="13" fill="#46565B">6 м²</text>
+    <text x="360" y="520" font-size="17" font-weight="500">Гостиная-кухня</text><text x="360" y="542" font-size="13" fill="#46565B">26 м²</text>
+    <text x="640" y="516" font-size="17" font-weight="500">Прихожая</text><text x="640" y="538" font-size="13" fill="#46565B">14 м²</text>
+  </g>
+
+  <!-- размеры -->
+  <g stroke="#46565B" stroke-width="1.4" fill="none">
+    <path d="M170 96H770M170 86V106M770 86V106"/>
+    <path d="M118 150V630M108 150H128M108 630H128"/>
+  </g>
+  <rect x="440" y="84" width="60" height="24" fill="#CFE1EA"/>
+  <text x="470" y="102" font-size="14" text-anchor="middle" fill="#46565B">10 000</text>
+  <rect x="104" y="370" width="28" height="72" fill="#CFE1EA"/>
+  <text transform="translate(124 406) rotate(-90)" font-size="14" text-anchor="middle" fill="#46565B">8 000</text>
+
+  <!-- север -->
+  <g transform="translate(880 130)">
+    <circle r="30" fill="none" stroke="#0E1C20" stroke-width="2"/>
+    <path d="M0 -24L9 10L0 4L-9 10Z"/>
+    <text x="0" y="-38" font-size="14" font-weight="500" text-anchor="middle">С</text>
+  </g>
+
+  <!-- штамп -->
+  <g transform="translate(790 676)">
+    <rect width="180" height="92" fill="#EEF2F1" stroke="#0E1C20" stroke-width="2"/>
+    <rect width="180" height="26" fill="#F26A2E"/>
+    <text x="10" y="18" font-size="13" font-weight="500">Индивидуальный проект</text>
+    <text x="10" y="50" font-size="13">Пример: план 1 этажа</text>
+    <text x="10" y="68" font-size="13" fill="#46565B">Масштаб 1 : 100</text>
+    <text x="10" y="84" font-size="11" fill="#46565B">Иллюстрация, не проект</text>
+  </g>
+</svg>
